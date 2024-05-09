@@ -1,0 +1,12 @@
+<template>
+
+    <h1>Parent Component</h1>
+
+    <lightning-button variant="brand" label="Brand" title="Primary action" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+
+    <template if:true={isVisible}>
+        <c-life-cycle-child></c-life-cycle-child>
+
+    </template>
+    
+</template>

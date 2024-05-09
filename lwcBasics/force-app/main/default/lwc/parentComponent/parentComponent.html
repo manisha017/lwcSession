@@ -1,0 +1,21 @@
+<template>
+    <lightning-card title="Parent to Child Communication">
+        <lightning-layout>
+            <lightning-layout-item>
+                <lightning-input label="Enter the Message" onchange={handleChangeEvent}>  </lightning-input>
+         </lightning-layout-item>
+
+            <lightning-layout-item>
+                <c-child-component></c-child-component>
+            </lightning-layout-item>
+
+            <lightning-layout-item>
+                <c-life-cycle-child></c-life-cycle-child>
+            </lightning-layout-item>
+
+
+        </lightning-layout>
+
+
+    </lightning-card>
+</template>

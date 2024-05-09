@@ -1,4 +1,4 @@
-import { LightningElement } from 'lwc';
+import { LightningElement,api } from 'lwc';
 
 export default class LifeCycleChild extends LightningElement {
 
@@ -20,6 +20,13 @@ export default class LifeCycleChild extends LightningElement {
         
         console.log('child renderedCallback called');
      
+    }
+
+
+
+    disconnectedCallback(){
+        console.log('child disconnectedCallback of child called');
+        
     }
     
     
