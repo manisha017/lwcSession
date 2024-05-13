@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Parent Component">
+    </lightning-card>
+
+    <lightning-button label="Neutral" title="Non-primary action" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+  
+    <template if:true={isVisible}>
+    <c-life-cycle-child-component-example>  
+    </c-life-cycle-child-component-example>
+    
+    
+  </template>
+  
+</template>
