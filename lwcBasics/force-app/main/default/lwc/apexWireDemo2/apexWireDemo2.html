@@ -1,10 +1,10 @@
 <template>
-    <lightning-card title="Apex Wire method to a property">
-        <template if:true={accounts.data}>
-            <template for:each= {accounts.data} for:item="acc">
+    <lightning-card title="Apex Wire method to a function">
+        <template if:true={accountList}>
+            <template for:each= {accountList} for:item="acc">
                 <div key={acc.Id}>
                     <p>  Name : {acc.Name} </p>
-                    <p>  Type : {acc.Type} </p>
+                    <p>  Type : {acc.newType} </p>
                     <p>  Industry : {acc.Industry} </p>
                 </div>        
            
