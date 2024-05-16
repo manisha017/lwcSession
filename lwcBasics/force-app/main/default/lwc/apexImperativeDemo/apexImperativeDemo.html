@@ -1,0 +1,23 @@
+<template>
+    <lightning-card title="apex imperative demo">
+
+        <lightning-button label="call account method"  onclick ={handleClick}>
+
+
+        </lightning-button>
+        <template if:true={accounts}>
+            <template for:each={accounts} for:item = "ac">
+                <div key={ac.Id}>
+                 Name:  {ac.Name}
+                 Type:  {ac.Type}
+                </div>
+
+
+
+            </template>
+        </template>
+
+    </lightning-card>    
+   
+    
+</template>
