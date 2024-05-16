@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title="Apex wire with params">
+
+        <lightning-combobox
+            name="type"
+            label="Choose your Type"
+            value={selectedType}
+            options={options}
+            onchange={handleChange}
+        ></lightning-combobox>
+        <template if:true={filterAccounts.data}>
+            <template for:each={filterAccounts.data} for:item="acc">
+                <div key={acc.Id}>
+                    <p> Name {acc.Name}</p>
+                    <p> Type {acc.Type}</p>
+                </div>
+            </template>
+        </template>
+    </lightning-card>
+</template>
