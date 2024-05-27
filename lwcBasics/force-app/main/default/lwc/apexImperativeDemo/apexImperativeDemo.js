@@ -4,7 +4,7 @@ import getAccountList from '@salesforce/apex/AccControllerImperative.getAccountL
 export default class ApexImperativeDemo extends LightningElement {
     accounts;
 
-
+             
     handleClick(){
         getAccountList().then(result=>{
           this.accounts = result; 
