@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="User detail using wire">
+
+        <p>{userId}</p>
+       <template if:true ={userInfo}>
+        <p>{userInfo.Email.value}</p>
+         <p>{userInfo.Name.value}</p>
+
+
+       </template>
+        
+    </lightning-card>
+    
+</template>
