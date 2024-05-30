@@ -41,38 +41,3 @@ public with sharing class AccountHandlerTrigger {
         }
 
     }
-
-
-    public static void PreventAccountDeletion(List<Account> accList){
-        Set<Id> accountIdSet = new Set<Id>();
-        Map<Id,boolean> accountIdIsPrimaryMap = new Map<Id,boolean>();
-
-        //prepare accountIdSet
-        for(Account acc : accList){
-            accountIdSet.add(acc.Id);
-            System.debug('Manisha'+ accountIdSet);
-        }
-
-        List<Contact> contactList = 
-        [select id,AccountId,isPrimary__c from contact where accountId IN: accountIdSet  and isPrimary__c = true];
-
-        System.debug('Manisha'+ contactList);
-        //    //populate map
-        //     for(Contact con : contactList){
-        //         accountIdIsPrimaryMap.put(con.AccountId,con.isPrimary__c);
-        //     }
-
-        //validating and prevent deletion
-        for(Account acc : accList){
-            // if(accountIdIsPrimaryMap.get(acc.Id) != null && accountIdIsPrimaryMap.get(acc.Id) == true){
-            //     acc.addError('show error message');
-            // }
-            if(!contactList.isEmpty()){
-                System.debug('Manisha');
-                acc.addError('show error message');
-            }
-
-        }
-
-    }
-}
