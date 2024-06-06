@@ -21,7 +21,7 @@ picklistVal;
     picklistHandler({data,error}){
         if(data){
             this.picklistVal = data.values;
-            console.log(this.picklistVal);
+            console.log(this.picklistVal);//
         }
     }
 
