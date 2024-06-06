@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="picklist Values">
+
+        <lightning-combobox
+        name="progress"
+        label="Status"
+        value={value}
+        placeholder="Select Progress"
+        options={picklistVal}
+        onchange={handleChange} ></lightning-combobox>
+        selected picklist value:   {value}
+
+    </lightning-card>
+</template>
