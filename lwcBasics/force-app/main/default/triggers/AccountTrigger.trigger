@@ -1,4 +1,4 @@
-trigger AccountTrigger on Account (before insert,before update,after insert,after update) {
+trigger AccountTrigger on Account (before insert,before update,after insert,after update,before delete) {
     if(Trigger.isBefore && (Trigger.isupdate || Trigger.isInsert)){
         AccountHandlerTrigger.validateAccountBeforeInsert(Trigger.new);
 
@@ -26,6 +26,10 @@ trigger AccountTrigger on Account (before insert,before update,after insert,afte
                 insert oppList;
             }
         }
+    }
+
+    if(Trigger.isBefore && Trigger.isDelete){
+        AccountHandlerTrigger.PreventAccountDeletion(Trigger.old);
     }
 
 

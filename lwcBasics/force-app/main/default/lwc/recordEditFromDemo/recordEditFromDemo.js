@@ -19,7 +19,6 @@ export default class RecordEditFromDemo extends LightningElement {
     @api recordId;
 
 
-
     handleReset(){
         const inputFields = this.template.querySelectorAll('lightning-input-field');
         if(inputFields){

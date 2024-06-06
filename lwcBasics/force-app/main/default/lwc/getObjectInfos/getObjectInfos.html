@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="get ObjectInfos Adapater">
+        <template if:true={objectInfo}>
+            <template for:each={objectInfo.results} for:item="object">
+                <div key={object.result.apiName}>
+                    <p>{object.result.apiName}</p>
+                    <p>{object.result.defaultRecordTypeId}</p>
+            </div>
+            </template>
+
+        </template>
+     
+
+    </lightning-card>
+    
+</template>

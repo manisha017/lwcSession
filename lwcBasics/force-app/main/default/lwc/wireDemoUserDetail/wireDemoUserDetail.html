@@ -1,5 +1,5 @@
 <template>
-    <lightning-card title="User detail using wire">
+    <lightning-card title="User detail using wire as a function">
 
         <p>{userId}</p>
        <template if:true ={userInfo}>
@@ -9,6 +9,17 @@
 
        </template>
         
+    </lightning-card>
+
+    <lightning-card title="User detail using wire as a property">
+        data 
+        <template if:true={userDetailProperty.data}>
+         {userDetailProperty.data.fields.Email.value}
+         {userDetailProperty.data.fields.Name.value}
+
+
+        </template>
+
     </lightning-card>
     
 </template>

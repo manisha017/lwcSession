@@ -26,6 +26,7 @@ userDetailHandler({data,error})
     if(data){
       
       this.userInfo = data.fields;
+      
   
         
     }
@@ -35,6 +36,13 @@ userDetailHandler({data,error})
 
 
 }
+
+
+
+@wire(getRecord,{recordId :'$userId' ,fields })
+userDetailProperty
+
+
 
 
 }
