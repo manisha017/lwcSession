@@ -8,6 +8,7 @@ export default class GetPicklistValues extends LightningElement {
 val;
 value='';
 picklistVal;
+picklst;
 
     @wire(getObjectInfo, { objectApiName: ACCOUNT_OBJECT })
     infoHandler({data,error}){
@@ -18,12 +19,21 @@ picklistVal;
 
 
     @wire(getPicklistValues, { recordTypeId: '$val', fieldApiName: INDUSTRY_FIELD })
-    picklistHandler({data,error}){
-        if(data){
-            this.picklistVal = data.values;
-            console.log(this.picklistVal);
-        }
+    picklistHandler(response){
+    if(response.data){
+        this.picklistVal = response.data.values;
+        this.picklst = response.data.values.map(value =>{
+
+            return {
+                label : value.label,
+                value : value.value
+            }
+        })
+        console.log('picklst   ' + JSON.stringify(this.picklst));
+        console.log('picklistVal   ' + JSON.stringify(this.picklistVal));
     }
+    }
+
 
 
     handleChange(event) {
