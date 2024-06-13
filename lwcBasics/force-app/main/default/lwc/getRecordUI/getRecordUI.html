@@ -1,5 +1,10 @@
 <template>
-    <lightning-card title="get list ui">
-        
+    <lightning-card title="get record ui">
+        <template for:each={formFields} for:item="item">
+            <div key={item.label} class="slds-form-element">
+                <p><b>{item.label}</b></p>
+                <p>{item.value}</p>
+            </div>
+        </template>
     </lightning-card>
 </template>
