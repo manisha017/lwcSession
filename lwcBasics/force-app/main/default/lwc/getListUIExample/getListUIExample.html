@@ -1,0 +1,37 @@
+<template>
+
+    <lightning-card title="Get List UI">
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                </tr>
+            </thead>
+            <tbody>
+                <template for:each={contacts} for:item="c">
+                    <tr key={c.fields.Id.value}>
+                        <td>{c.fields.Name.value}</td>
+                        <td>{c.fields.Email.value}</td>
+                        <td>{c.fields.Phone.value}</td>
+                    </tr>
+                </template>
+            </tbody>
+        </table>
+        <lightning-button-group>
+
+            <lightning-button 
+                variant="brand" 
+                label="Previous" 
+                onclick={handlePrevious}>
+            </lightning-button>
+            <lightning-button 
+                variant="brand" 
+                label="Next" 
+                onclick={handleNext}>
+            </lightning-button>
+        </lightning-button-group>
+
+    </lightning-card>
+</template>
