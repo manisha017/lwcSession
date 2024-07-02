@@ -26,7 +26,7 @@ export default class GetListUIExample extends LightningElement {
     }
 
     handlePrevious(){
-        this.pageToken - this.previousPageToken;
+        this.pageToken = this.previousPageToken;
     }
     handleNext(){
         this.pageToken = this.nextPageToken;

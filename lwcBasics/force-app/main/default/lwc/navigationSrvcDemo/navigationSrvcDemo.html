@@ -1,0 +1,42 @@
+<template>
+    <lightning-card title ="Navigation Service to Record Pages">
+        <lightning-button-group>
+            <lightning-button label ="New Record Page" onclick={navigateToNewRecordPage}></lightning-button>
+            <lightning-button label ="Edit Record Page" onclick={navigateToEditRecordPage}></lightning-button>
+            <lightning-button label ="View Record Page" onclick={navigateToViewRecordPage}></lightning-button>
+        </lightning-button-group>
+
+     
+    </lightning-card>
+    <lightning-card title="Navigation to List View">
+        <lightning-button-group>
+            <lightning-button label ="Account recent view" onclick={navigateToListView}></lightning-button>
+            <lightning-button label ="related list view" onclick={navigateToRecentListView}></lightning-button>
+        </lightning-button-group>
+    </lightning-card>
+
+
+    <lightning-card title="Navigation to Web Page">
+        <lightning-button-group>
+            <lightning-button label ="web Page" onclick={navigateToWebPage}></lightning-button>
+        </lightning-button-group>
+    </lightning-card>
+    <lightning-card title="Navigation to Chatter">
+        <lightning-button-group>
+            <lightning-button label ="Chatter" onclick={navigateToChatter}></lightning-button>
+        </lightning-button-group>
+    </lightning-card>
+     <lightning-card title="Navigation to Home Page">
+            <lightning-button-group>
+                <lightning-button label ="Home Page" onclick={navigateToHomePage}></lightning-button>
+            </lightning-button-group>
+     </lightning-card>
+
+     <lightning-card title="Navigation to Object Page">
+        <lightning-button-group>
+            <lightning-button label ="Account Object" onclick={navigateToAcc}></lightning-button>
+            <lightning-button label ="Contact Object" onclick={navigateToRecentCon}></lightning-button>
+        </lightning-button-group>
+    </lightning-card>
+
+</template>

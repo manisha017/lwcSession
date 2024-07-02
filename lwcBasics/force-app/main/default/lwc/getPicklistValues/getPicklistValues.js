@@ -19,8 +19,8 @@ picklst;
 
 
     @wire(getPicklistValues, { recordTypeId: '$val', fieldApiName: INDUSTRY_FIELD })
-    picklistHandler(response){
-    if(response.data){
+    picklistHandler({data,error}){
+    if(data){
         this.picklistVal = response.data.values;
         this.picklst = response.data.values.map(value =>{
 
