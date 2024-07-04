@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title="Publisher component">
+        <lightning-layout>
+            <lightning-layout-item>
+                
+                <lightning-combobox
+                    name="progress"
+                    label="Colour"
+                    value={valueOfColour}
+                    options={options}
+                    onchange={handleChange} 
+                >
+                </lightning-combobox>
+                <lightning-button label="change colour" variant="brand" onclick={handleChangeColour}></lightning-button>
+            </lightning-layout-item>
+        </lightning-layout>
+
+    </lightning-card>
+    
+</template>
